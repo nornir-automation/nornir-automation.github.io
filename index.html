@@ -3,63 +3,216 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>nornir.tech — Website Decommissioning Notice</title>
-        <link rel="stylesheet" href="/main.dede02da9537a98158079c023e83573e18127834838ef08172acce888341a797.css">
+        <title>Nornir — OpsMill is the New Steward of Nornir</title>
+        <meta name="description" content="OpsMill is now the steward of the Nornir project. Nornir stays open source and community-driven.">
+
+        <!-- Start of Reo Javascript -->
+        <script type="text/javascript">
+          !function(){var e,t,n;e="cecb9ced66c4e45",t=function(){Reo.init({clientID:"cecb9ced66c4e45"})},(n=document.createElement("script")).src="https://static.reo.dev/"+e+"/reo.js",n.defer=!0,n.onload=t,document.head.appendChild(n)}();
+        </script>
+        <!-- End of Reo Javascript -->
+
+        <style>
+            @font-face {
+                font-family: "Inter UI";
+                font-style: normal;
+                font-weight: 500;
+                src: url("/fonts/Inter-UI-Medium.woff2") format("woff2"),
+                     url("/fonts/Inter-UI-Medium.woff") format("woff");
+                font-display: swap;
+            }
+            @font-face {
+                font-family: "Inter UI";
+                font-style: normal;
+                font-weight: 700;
+                src: url("/fonts/Inter-UI-Bold.woff2") format("woff2"),
+                     url("/fonts/Inter-UI-Bold.woff") format("woff");
+                font-display: swap;
+            }
+
+            :root {
+                --bg: #1a1b1e;
+                --bg-card: #25262b;
+                --border: #34363c;
+                --text: #e6e7e9;
+                --text-muted: #a0a3a8;
+                --green: #4caf50;
+                --green-bright: #5dd663;
+            }
+
+            * { box-sizing: border-box; }
+
+            html, body {
+                margin: 0;
+                padding: 0;
+                min-height: 100%;
+            }
+
+            body {
+                font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                background: radial-gradient(ellipse at 50% -10%, #21331f 0%, var(--bg) 55%);
+                color: var(--text);
+                line-height: 1.65;
+                -webkit-font-smoothing: antialiased;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            .wrapper {
+                flex: 1 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 48px 20px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 680px;
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: 18px;
+                padding: 48px 44px;
+                text-align: center;
+                box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+            }
+
+            .logo {
+                width: 150px;
+                height: auto;
+                margin-bottom: 8px;
+            }
+
+            .eyebrow {
+                display: inline-block;
+                font-size: 0.72rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--green-bright);
+                background: rgba(76, 175, 80, 0.12);
+                border: 1px solid rgba(76, 175, 80, 0.3);
+                border-radius: 999px;
+                padding: 6px 14px;
+                margin-bottom: 22px;
+            }
+
+            h1 {
+                font-size: clamp(1.6rem, 4vw, 2.2rem);
+                font-weight: 700;
+                line-height: 1.25;
+                margin: 0 0 22px;
+            }
+
+            .summary {
+                font-size: 1.06rem;
+                color: var(--text-muted);
+                margin: 0 0 16px;
+            }
+
+            .summary strong { color: var(--text); font-weight: 700; }
+
+            .cta {
+                display: inline-block;
+                margin: 18px 0 6px;
+                padding: 14px 30px;
+                font-size: 1rem;
+                font-weight: 700;
+                color: #11210f;
+                background: var(--green);
+                border-radius: 10px;
+                text-decoration: none;
+                transition: background 0.18s ease, transform 0.18s ease;
+            }
+            .cta:hover { background: var(--green-bright); transform: translateY(-1px); }
+
+            .divider {
+                height: 1px;
+                background: var(--border);
+                margin: 36px 0 28px;
+            }
+
+            .resources-label {
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--text-muted);
+                margin: 0 0 16px;
+            }
+
+            .resources {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                justify-content: center;
+            }
+
+            .resources a {
+                flex: 1 1 160px;
+                min-width: 150px;
+                padding: 12px 16px;
+                color: var(--text);
+                background: var(--bg);
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                text-decoration: none;
+                font-size: 0.95rem;
+                font-weight: 500;
+                transition: border-color 0.18s ease, color 0.18s ease;
+            }
+            .resources a:hover { border-color: var(--green); color: var(--green-bright); }
+
+            footer {
+                flex-shrink: 0;
+                text-align: center;
+                padding: 24px 20px;
+                color: var(--text-muted);
+                font-size: 0.85rem;
+            }
+
+            @media (max-width: 520px) {
+                .card { padding: 36px 24px; }
+            }
+        </style>
     </head>
 
-    <body class="dark-theme">
-        <div class="container">
-            <div class="content">
-                <main aria-role="main">
-                    <div align="center">
-                        <h1>nornir.tech</h1>
-                        <img src="/img/logo/nornir_green.png" alt="nornir logo" height=200px>
-                        
-                        <div style="max-width: 800px; margin: 40px auto; padding: 20px; text-align: center;">
-                            <h2>Website Decommissioning Notice</h2>
-                            
-                            <p style="font-size: 1.2em; margin: 20px 0;">
-                                The nornir.tech website is being decommissioned.
-                            </p>
-                            
-                            <div style="background-color: rgba(0, 0, 0, 0.1); padding: 20px; border-radius: 5px; margin: 30px 0;">
-                                <p style="font-size: 1.1em; margin: 10px 0;">
-                                    For information about the Nornir project, please visit:
-                                </p>
-                                <p style="font-size: 1.1em; margin: 10px 0;">
-                                    <a href="http://github.com/nornir-automation/nornir" style="color: #4CAF50; text-decoration: underline;">GitHub Repository</a>
-                                </p>
-                                
-                                <p style="font-size: 1.1em; margin: 10px 0;">
-                                    Documentation can be found at:
-                                </p>
-                                <p style="font-size: 1.1em; margin: 10px 0;">
-                                    <a href="https://nornir.readthedocs.io/en/latest/" style="color: #4CAF50; text-decoration: underline;">Nornir Documentation</a>
-                                </p>
-                                
-                                <p style="font-size: 1.1em; margin: 10px 0;">
-                                    For the plugins list, please visit:
-                                </p>
-                                <p style="font-size: 1.1em; margin: 10px 0;">
-                                    <a href="https://nornir.readthedocs.io/en/latest/community/plugin_list.html" style="color: #4CAF50; text-decoration: underline;">Nornir Plugins List</a>
-                                </p>
-                            </div>
-                            
-                            <p style="font-size: 1.1em; margin: 20px 0;">
-                                Thank you for your continued support of the Nornir project!
-                            </p>
-                        </div>
-                    </div>
-                </main>
-            </div>
-
-            <footer class="footer">
-                <div class="footer__inner">
-                    <div class="footer__content">
-                        <span>&copy; 2025 Nornir</span>
-                    </div>
+    <body>
+        <div class="wrapper">
+            <main class="card" aria-role="main">
+                <img class="logo" src="/img/logo/nornir_green.png" alt="Nornir logo">
+                <div>
+                    <span class="eyebrow">Project Announcement</span>
                 </div>
-            </footer>
+                <h1>OpsMill is the New Steward of Nornir</h1>
+
+                <p class="summary">
+                    <strong>OpsMill is now the steward of the Nornir project.</strong> Nornir will remain
+                    open source and community-driven: your plugins, scripts, and workflows keep working
+                    exactly as they do today, and the framework stays free.
+                </p>
+                <p class="summary">
+                    With OpsMill's long-term commitment and resources, the focus now turns to
+                    modernizing Nornir and shaping its roadmap together with the community. Nornir's creator,
+                    David Barroso, continues to support the project as a Technical Advisor.
+                </p>
+
+                <a class="cta" href="https://opsmill.com/nornir-joins-opsmill/">Read the full announcement →</a>
+
+                <div class="divider"></div>
+
+                <p class="resources-label">Project Resources</p>
+                <div class="resources">
+                    <a href="https://github.com/nornir-automation/nornir">GitHub Repository</a>
+                    <a href="https://nornir.readthedocs.io/en/latest/">Documentation</a>
+                    <a href="https://nornir.readthedocs.io/en/latest/community/plugin_list.html">Plugins List</a>
+                </div>
+            </main>
         </div>
+
+        <footer>
+            <span>&copy; 2026 Nornir</span>
+        </footer>
     </body>
 </html>
